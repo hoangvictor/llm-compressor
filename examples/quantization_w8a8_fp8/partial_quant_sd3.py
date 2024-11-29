@@ -1,5 +1,4 @@
 import time
-import torch
 import json
 import os
 
@@ -32,16 +31,16 @@ def seed_everything(seed: int):
 seed_everything(42)
 
 def partial_quant():
-    batch_size = 4
-    num_batch = 1
-    coco_val_dataset_path = f'{base_dir}/data/coco_all_data_info.json'
+    batch_size = 1
+    num_batch = 2048
+    coco_val_dataset_path = f'{base_dir}/data/coco_2048_samples_info.json'
     img_save_dir = f'{base_dir}/data/generated_img'
 
     all_coco_promts_data = json.load(open(coco_val_dataset_path))
     all_coco_images = list(all_coco_promts_data.keys())
 
     all_results = []
-    for quant_mode in ['fp8']: # None, 'int8'
+    for quant_mode in ['fp8', None, 'int8']:
         os.makedirs(f'{img_save_dir}_{quant_mode}', exist_ok=True)
 
         pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
@@ -76,13 +75,16 @@ def partial_quant():
             image_ids = all_coco_images[i:i+batch_size]
             input_prompts = [all_coco_promts_data[img] for img in image_ids]
 
+            if all(os.path.exists(os.path.join(f'{img_save_dir}_{quant_mode}', image_ids[j])) for j in range(len(image_ids))):
+                continue
+
             st = time.time()
             images = pipe(
                 prompt=input_prompts,
                 negative_prompt="",
-                height=512,
-                width=512,
-                num_inference_steps=28,
+                height=1024,
+                width=1024,
+                num_inference_steps=50,
                 guidance_scale=7.0
             ).images
             et = time.time()
@@ -92,7 +94,7 @@ def partial_quant():
                 images[j].save(os.path.join(f'{img_save_dir}_{quant_mode}', image_ids[j]))
             torch.cuda.empty_cache()
         
-        rnt = rnt[1:]
+        rnt = rnt[1:] if len(rnt) > 3 else rnt
         print("Running time:", sum(rnt)/len(rnt))
         all_results.append([quant_mode, sum(rnt)/len(rnt)])
 

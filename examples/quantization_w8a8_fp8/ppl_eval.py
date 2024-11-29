@@ -1,3 +1,4 @@
+import json
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '7'
 
@@ -50,6 +51,7 @@ class Evaluator:
 
         return torch.exp(torch.stack(nlls).sum() / (n_samples * 2048)), run_time
 
+full_results = {}
 all_results = []
 for model_path in [
     'meta-llama/Llama-3.2-1B',
@@ -59,6 +61,7 @@ for model_path in [
     'meta-llama/Llama-3.1-8B',
     'meta-llama/Llama-3.1-8B-Instruct'
 ]:
+    full_results[model_path] = {}
     for mode in [None, 'fp8', 'int8']:
         tokenizer = AutoTokenizer.from_pretrained(model_path)
         dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='test')
@@ -78,6 +81,8 @@ for model_path in [
                     )
             print('Finish quantize')
         ppl, run_time = evaluator.evaluate(model)
+        ppl = float(ppl.cpu().detach())
+
         rnt = sum(run_time[1:])/(len(run_time)-1)
         print(f'Mode: {mode}')
         print(f'Running time: {rnt}s')
@@ -85,7 +90,18 @@ for model_path in [
 
         all_results.append([model_path, mode, ppl, rnt])
 
+        if mode == None:
+            mode = 'original'
+
+        full_results[model_path][mode] = {
+            'run_time': run_time,
+            'ppl': ppl
+        }
+
         del tokenizer, dataset, evaluator, model, all_modules
         torch.cuda.empty_cache()
 
-print(pd.DataFrame(all_results, columns = ['model', 'mode', 'ppl', 'batch_inference_time']))
+        json.dump(full_results, open('/data0/tien/llm-compressor/data/full_results_llm.json', 'w'))
+
+df = pd.DataFrame(all_results, columns = ['model', 'mode', 'ppl', 'batch_inference_time'])
+df.to_csv('/data0/tien/llm-compressor/data/full_results_df.csv', index=False)

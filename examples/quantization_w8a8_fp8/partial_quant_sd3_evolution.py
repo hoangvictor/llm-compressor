@@ -37,8 +37,8 @@ def seed_everything(seed: int):
     
 seed_everything(42)
 
-def load_images(image_path, img_width=512, img_height=512):
-    def preprocess_image(image, img_width=512, img_height=512):
+def load_images(image_path, img_width=1024, img_height=1024):
+    def preprocess_image(image, img_width=1024, img_height=1024):
         image = torch.tensor(image).unsqueeze(0)
         image = image.permute(0, 3, 1, 2)
         return F.center_crop(image, (img_width, img_height))
@@ -57,8 +57,8 @@ def comp_fid(
     real_files_dir,
     fake_files_dir,
     batch_size=32,
-    width=512,
-    height=512
+    width=1024,
+    height=1024
 ):
     total = len(fake_files_dir)
     num = max(total // batch_size, 1)
@@ -158,8 +158,8 @@ class EvolutionSearcher:
             images = self.pipe(
                 prompt=input_prompts,
                 negative_prompt="",
-                height=512,
-                width=512,
+                height=1024,
+                width=1024,
                 num_inference_steps=28,
                 guidance_scale=7.0
             ).images
