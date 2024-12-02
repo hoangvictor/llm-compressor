@@ -1,0 +1,2912 @@
+
+{
+  "schemaVersion": 1,
+  "deviceProperties": [
+    {
+      "id": 0, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    },
+    {
+      "id": 1, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    },
+    {
+      "id": 2, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    },
+    {
+      "id": 3, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    },
+    {
+      "id": 4, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    },
+    {
+      "id": 5, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    },
+    {
+      "id": 6, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    },
+    {
+      "id": 7, "name": "AMD Instinct MI300X", "totalGlobalMem": 206141652992,
+      "computeMajor": 9, "computeMinor": 4,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "warpSize": 64,
+      "sharedMemPerBlock": 65536, "numSms": 304
+    , "maxSharedMemoryPerMultiProcessor": 65536
+    }
+  ],
+  "roctracer_version": 4.1,
+  "hip_runtime_version": 60241133,
+  "record_shapes": 1,
+  "hip_driver_version": 60241133,
+  "with_stack": 1,
+  "traceEvents": [
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::reshape", "pid": 92022, "tid": 92022,
+    "ts": 5379666547232.599, "dur": 13.756,
+    "args": {
+      "External id": 513,"Record function id": 0, "Concrete Inputs": ["", "[-1, 3072]"], "Input type": ["c10::Half", "ScalarList"], "Input Strides": [[3072, 1], []], "Input Dims": [[3072, 3072], []], "Ev Idx": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::view", "pid": 92022, "tid": 92022,
+    "ts": 5379666547238.575, "dur": 5.997,
+    "args": {
+      "External id": 514,"Record function id": 0, "Concrete Inputs": ["", "[-1, 3072]"], "Input type": ["c10::Half", "ScalarList"], "Input Strides": [[3072, 1], []], "Input Dims": [[3072, 3072], []], "Ev Idx": 1
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 92022, "tid": 92022,
+    "ts": 5379666547853.979, "dur": 22.008,
+    "args": {
+      "External id": 515,"Record function id": 0, "Concrete Inputs": ["[3072, 3072]", "26", "", "", "False", ""], "Input type": ["ScalarList", "Scalar", "", "", "Scalar", ""], "Input Strides": [[], [], [], [], [], []], "Input Dims": [[], [], [], [], [], []], "Ev Idx": 2
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 92022, "tid": 92022,
+    "ts": 5379666547885.313, "dur": 3.220,
+    "args": {
+      "External id": 516,"Record function id": 0, "Concrete Inputs": ["[3072, 1]", "6", "", "", "False", ""], "Input type": ["ScalarList", "Scalar", "", "", "Scalar", ""], "Input Strides": [[], [], [], [], [], []], "Input Dims": [[], [], [], [], [], []], "Ev Idx": 3
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "_C::dynamic_per_token_scaled_fp8_quant", "pid": 92022, "tid": 92022,
+    "ts": 5379666547939.415, "dur": 46.354,
+    "args": {
+      "External id": 517,"Record function id": 0, "Concrete Inputs": ["", "", "", ""], "Input type": ["c10::Float8_e4m3fnuz", "c10::Half", "float", ""], "Input Strides": [[3072, 1], [3072, 1], [1, 1], []], "Input Dims": [[3072, 3072], [3072, 3072], [3072, 1], []], "Ev Idx": 4
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::view", "pid": 92022, "tid": 92022,
+    "ts": 5379666548102.418, "dur": 4.215,
+    "args": {
+      "External id": 518,"Record function id": 0, "Concrete Inputs": ["", "[-1, 1]"], "Input type": ["float", "ScalarList"], "Input Strides": [[1], []], "Input Dims": [[3072], []], "Ev Idx": 5
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 92022, "tid": 92022,
+    "ts": 5379666548189.099, "dur": 8.384,
+    "args": {
+      "External id": 519,"Record function id": 0, "Concrete Inputs": ["[3072, 3072]", "5", "", "", "False", ""], "Input type": ["ScalarList", "Scalar", "", "", "Scalar", ""], "Input Strides": [[], [], [], [], [], []], "Input Dims": [[], [], [], [], [], []], "Ev Idx": 6
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 92022, "tid": 92022,
+    "ts": 5379666548862.042, "dur": 0.687,
+    "args": {
+      "External id": 520,"Record function id": 0, "Concrete Inputs": ["", "5", "False", "False", ""], "Input type": ["c10::Half", "Scalar", "Scalar", "Scalar", ""], "Input Strides": [[3072, 1], [], [], [], []], "Input Dims": [[3072, 3072], [], [], [], []], "Ev Idx": 7
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::view", "pid": 92022, "tid": 92022,
+    "ts": 5379666548879.803, "dur": 2.454,
+    "args": {
+      "External id": 521,"Record function id": 0, "Concrete Inputs": ["", "[3072, 3072]"], "Input type": ["c10::Half", "ScalarList"], "Input Strides": [[3072, 1], []], "Input Dims": [[3072, 3072], []], "Ev Idx": 8
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "threading.py(937): _bootstrap", "pid": 0, "tid": 0,
+    "ts": 5379666546442.814, "dur": 2677.347,
+    "args": {
+      "Python parent id": null, "Python id": 1, "Ev Idx": 9
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "threading.py(980): _bootstrap_inner", "pid": 0, "tid": 0,
+    "ts": 5379666546444.923, "dur": 2675.238,
+    "args": {
+      "Python parent id": 1, "Python id": 2, "Ev Idx": 10
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "tqdm/_monitor.py(60): run", "pid": 0, "tid": 0,
+    "ts": 5379666546448.361, "dur": 2671.800,
+    "args": {
+      "Python parent id": 2, "Python id": 3, "Ev Idx": 11
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "threading.py(581): wait", "pid": 0, "tid": 0,
+    "ts": 5379666546450.128, "dur": 2670.033,
+    "args": {
+      "Python parent id": 3, "Python id": 4, "Ev Idx": 12
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "threading.py(316): wait", "pid": 0, "tid": 0,
+    "ts": 5379666546453.151, "dur": 2667.010,
+    "args": {
+      "Python parent id": 4, "Python id": 5, "Ev Idx": 13
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "threading.py(937): _bootstrap", "pid": 0, "tid": 0,
+    "ts": 5379666546460.396, "dur": 2659.765,
+    "args": {
+      "Python parent id": 5, "Python id": 6, "Ev Idx": 14
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "threading.py(980): _bootstrap_inner", "pid": 0, "tid": 0,
+    "ts": 5379666546460.995, "dur": 2659.166,
+    "args": {
+      "Python parent id": 6, "Python id": 7, "Ev Idx": 15
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "threading.py(917): run", "pid": 0, "tid": 0,
+    "ts": 5379666546461.787, "dur": 2658.374,
+    "args": {
+      "Python parent id": 7, "Python id": 8, "Ev Idx": 16
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_inductor/compile_worker/subproc_pool.py(162): _read_thread", "pid": 0, "tid": 0,
+    "ts": 5379666546463.454, "dur": 2656.707,
+    "args": {
+      "Python parent id": 8, "Python id": 9, "Ev Idx": 17
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_inductor/compile_worker/subproc_pool.py(54): _recv_msg", "pid": 0, "tid": 0,
+    "ts": 5379666546465.701, "dur": 2654.460,
+    "args": {
+      "Python parent id": 9, "Python id": 10, "Ev Idx": 18
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "profiler.py(72): <module>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546471.881, "dur": 2648.280,
+    "args": {
+      "Python parent id": null, "Python id": 11, "Ev Idx": 19
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "profiler.py(25): profile", "pid": 92022, "tid": 92022,
+    "ts": 5379666546472.307, "dur": 2647.854,
+    "args": {
+      "Python parent id": 11, "Python id": 12, "Ev Idx": 20
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(773): __enter__", "pid": 92022, "tid": 92022,
+    "ts": 5379666546472.887, "dur": 150.930,
+    "args": {
+      "Python parent id": 12, "Python id": 13, "Ev Idx": 21
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(783): start", "pid": 92022, "tid": 92022,
+    "ts": 5379666546473.437, "dur": 150.232,
+    "args": {
+      "Python parent id": 13, "Python id": 14, "Ev Idx": 22
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(836): _transit_action", "pid": 92022, "tid": 92022,
+    "ts": 5379666546474.412, "dur": 148.778,
+    "args": {
+      "Python parent id": 14, "Python id": 15, "Ev Idx": 23
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(199): start_trace", "pid": 92022, "tid": 92022,
+    "ts": 5379666546474.779, "dur": 147.902,
+    "args": {
+      "Python parent id": 15, "Python id": 16, "Ev Idx": 24
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/profiler.py(358): _start_trace", "pid": 92022, "tid": 92022,
+    "ts": 5379666546475.200, "dur": 32.907,
+    "args": {
+      "Python parent id": 16, "Python id": 17, "Ev Idx": 25
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function perf_counter_ns>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546504.470, "dur": 1.148,
+    "args": {
+      "Python parent id": 17, "Python id": 18, "Ev Idx": 26
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(331): add_metadata_json", "pid": 92022, "tid": 92022,
+    "ts": 5379666546513.426, "dur": 11.111,
+    "args": {
+      "Python parent id": 16, "Python id": 19, "Ev Idx": 27
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _add_metadata_json of PyCapsule object at 0x7f286a0921e0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546521.751, "dur": 2.627,
+    "args": {
+      "Python parent id": 19, "Python id": 20, "Ev Idx": 28
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(331): add_metadata_json", "pid": 92022, "tid": 92022,
+    "ts": 5379666546526.539, "dur": 1.249,
+    "args": {
+      "Python parent id": 16, "Python id": 21, "Ev Idx": 29
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _add_metadata_json of PyCapsule object at 0x7f286a0921e0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546527.044, "dur": 0.711,
+    "args": {
+      "Python parent id": 21, "Python id": 22, "Ev Idx": 30
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method kineto_available of PyCapsule object at 0x7f286a092240>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546530.616, "dur": 0.466,
+    "args": {
+      "Python parent id": 16, "Python id": 23, "Ev Idx": 31
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(346): _get_distributed_info", "pid": 92022, "tid": 92022,
+    "ts": 5379666546532.263, "dur": 38.431,
+    "args": {
+      "Python parent id": 16, "Python id": 24, "Ev Idx": 32
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/distributed/__init__.py(14): is_available", "pid": 92022, "tid": 92022,
+    "ts": 5379666546547.125, "dur": 4.049,
+    "args": {
+      "Python parent id": 24, "Python id": 25, "Ev Idx": 33
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546549.324, "dur": 1.746,
+    "args": {
+      "Python parent id": 25, "Python id": 26, "Ev Idx": 34
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/distributed/distributed_c10d.py(1207): is_initialized", "pid": 92022, "tid": 92022,
+    "ts": 5379666546556.808, "dur": 13.714,
+    "args": {
+      "Python parent id": 24, "Python id": 27, "Ev Idx": 35
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/distributed/distributed_c10d.py(702): WORLD", "pid": 92022, "tid": 92022,
+    "ts": 5379666546566.115, "dur": 4.288,
+    "args": {
+      "Python parent id": 27, "Python id": 28, "Ev Idx": 36
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/distributed/distributed_c10d.py(577): default_pg", "pid": 92022, "tid": 92022,
+    "ts": 5379666546569.851, "dur": 0.469,
+    "args": {
+      "Python parent id": 28, "Python id": 29, "Ev Idx": 37
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546572.103, "dur": 2.254,
+    "args": {
+      "Python parent id": 16, "Python id": 30, "Ev Idx": 38
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/utils/_config_module.py(552): __getattr__", "pid": 92022, "tid": 92022,
+    "ts": 5379666546596.242, "dur": 22.921,
+    "args": {
+      "Python parent id": 16, "Python id": 31, "Ev Idx": 39
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/utils/_config_module.py(257): __getattr__", "pid": 92022, "tid": 92022,
+    "ts": 5379666546603.880, "dur": 14.982,
+    "args": {
+      "Python parent id": 31, "Python id": 32, "Ev Idx": 40
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546617.918, "dur": 0.653,
+    "args": {
+      "Python parent id": 32, "Python id": 33, "Ev Idx": 41
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method items of dict object at 0x7f2037f27ac0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546621.768, "dur": 0.295,
+    "args": {
+      "Python parent id": 16, "Python id": 34, "Ev Idx": 42
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "nn.Module: QuantLinear_0", "pid": 92022, "tid": 92022,
+    "ts": 5379666546646.071, "dur": 2246.945,
+    "args": {
+      "Python parent id": 12, "Python id": 35, "Python module id": 0, "Ev Idx": 43
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1744): _call_impl", "pid": 92022, "tid": 92022,
+    "ts": 5379666546650.959, "dur": 2241.403,
+    "args": {
+      "Python parent id": 35, "Python id": 36, "Ev Idx": 44
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _get_tracing_state of PyCapsule object at 0x7f286ad54720>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546655.428, "dur": 2.246,
+    "args": {
+      "Python parent id": 36, "Python id": 37, "Ev Idx": 45
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/utils/_contextlib.py(113): decorate_context", "pid": 92022, "tid": 92022,
+    "ts": 5379666546668.218, "dur": 2223.804,
+    "args": {
+      "Python parent id": 36, "Python id": 38, "Ev Idx": 46
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/utils/_contextlib.py(146): clone", "pid": 92022, "tid": 92022,
+    "ts": 5379666546671.273, "dur": 24.036,
+    "args": {
+      "Python parent id": 38, "Python id": 39, "Ev Idx": 47
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/utils/_contextlib.py(154): __new__", "pid": 92022, "tid": 92022,
+    "ts": 5379666546676.288, "dur": 4.544,
+    "args": {
+      "Python parent id": 39, "Python id": 40, "Ev Idx": 48
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method __new__ of type object at 0x738c80>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546680.334, "dur": 0.391,
+    "args": {
+      "Python parent id": 40, "Python id": 41, "Ev Idx": 49
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/grad_mode.py(75): __init__", "pid": 92022, "tid": 92022,
+    "ts": 5379666546683.025, "dur": 12.081,
+    "args": {
+      "Python parent id": 39, "Python id": 42, "Ev Idx": 50
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_jit_internal.py(103): is_scripting", "pid": 92022, "tid": 92022,
+    "ts": 5379666546692.721, "dur": 0.322,
+    "args": {
+      "Python parent id": 42, "Python id": 43, "Ev Idx": 51
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/grad_mode.py(80): __enter__", "pid": 92022, "tid": 92022,
+    "ts": 5379666546696.696, "dur": 8.166,
+    "args": {
+      "Python parent id": 38, "Python id": 44, "Ev Idx": 52
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function is_grad_enabled>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546699.289, "dur": 0.423,
+    "args": {
+      "Python parent id": 44, "Python id": 45, "Ev Idx": 53
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/grad_mode.py(184): __init__", "pid": 92022, "tid": 92022,
+    "ts": 5379666546701.088, "dur": 3.395,
+    "args": {
+      "Python parent id": 44, "Python id": 46, "Ev Idx": 54
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function is_grad_enabled>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546701.559, "dur": 0.149,
+    "args": {
+      "Python parent id": 46, "Python id": 47, "Ev Idx": 55
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _set_grad_enabled>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546703.375, "dur": 0.994,
+    "args": {
+      "Python parent id": 46, "Python id": 48, "Ev Idx": 56
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "custom_blocks.py(81): forward", "pid": 92022, "tid": 92022,
+    "ts": 5379666546707.548, "dur": 2175.922,
+    "args": {
+      "Python parent id": 38, "Python id": 49, "Ev Idx": 57
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method reshape of Tensor object at 0x7f2037f301d0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666546714.555, "dur": 533.889,
+    "args": {
+      "Python parent id": 49, "Python id": 50, "Ev Idx": 58
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1922): __getattr__", "pid": 92022, "tid": 92022,
+    "ts": 5379666547262.127, "dur": 3.083,
+    "args": {
+      "Python parent id": 49, "Python id": 51, "Ev Idx": 59
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/model_executor/layers/quantization/utils/w8a8_utils.py(84): apply_fp8_linear", "pid": 92022, "tid": 92022,
+    "ts": 5379666547274.174, "dur": 1594.021,
+    "args": {
+      "Python parent id": 49, "Python id": 52, "Ev Idx": 60
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/_custom_ops.py(44): wrapper", "pid": 92022, "tid": 92022,
+    "ts": 5379666547283.098, "dur": 706.576,
+    "args": {
+      "Python parent id": 52, "Python id": 53, "Ev Idx": 61
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/_custom_ops.py(675): scaled_fp8_quant", "pid": 92022, "tid": 92022,
+    "ts": 5379666547285.773, "dur": 703.237,
+    "args": {
+      "Python parent id": 53, "Python id": 54, "Ev Idx": 62
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/platforms/interface.py(63): is_rocm", "pid": 92022, "tid": 92022,
+    "ts": 5379666547296.410, "dur": 2.693,
+    "args": {
+      "Python parent id": 54, "Python id": 55, "Ev Idx": 63
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method empty of type object at 0x7f2b5ff31740>", "pid": 92022, "tid": 92022,
+    "ts": 5379666547307.243, "dur": 570.995,
+    "args": {
+      "Python parent id": 54, "Python id": 56, "Ev Idx": 64
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method empty of type object at 0x7f2b5ff31740>", "pid": 92022, "tid": 92022,
+    "ts": 5379666547881.909, "dur": 7.249,
+    "args": {
+      "Python parent id": 54, "Python id": 57, "Ev Idx": 65
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_ops.py(1112): __call__", "pid": 92022, "tid": 92022,
+    "ts": 5379666547908.635, "dur": 79.591,
+    "args": {
+      "Python parent id": 54, "Python id": 58, "Ev Idx": 66
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method dynamic_per_token_scaled_fp8_quant of PyCapsule object at 0x7f28fa464480>", "pid": 92022, "tid": 92022,
+    "ts": 5379666547915.667, "dur": 72.351,
+    "args": {
+      "Python parent id": 58, "Python id": 59, "Ev Idx": 67
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/_custom_ops.py(44): wrapper", "pid": 92022, "tid": 92022,
+    "ts": 5379666547993.013, "dur": 874.741,
+    "args": {
+      "Python parent id": 52, "Python id": 60, "Ev Idx": 68
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/_custom_ops.py(479): cutlass_scaled_mm", "pid": 92022, "tid": 92022,
+    "ts": 5379666547996.655, "dur": 868.602,
+    "args": {
+      "Python parent id": 60, "Python id": 61, "Ev Idx": 69
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/platforms/interface.py(63): is_rocm", "pid": 92022, "tid": 92022,
+    "ts": 5379666548001.234, "dur": 0.788,
+    "args": {
+      "Python parent id": 61, "Python id": 62, "Ev Idx": 70
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "importlib/__init__.py(109): import_module", "pid": 92022, "tid": 92022,
+    "ts": 5379666548007.482, "dur": 85.218,
+    "args": {
+      "Python parent id": 61, "Python id": 63, "Ev Idx": 71
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method startswith of str object at 0x7f28512be4b0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548011.476, "dur": 0.586,
+    "args": {
+      "Python parent id": 63, "Python id": 64, "Ev Idx": 72
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(1018): _gcd_import", "pid": 92022, "tid": 92022,
+    "ts": 5379666548016.024, "dur": 76.537,
+    "args": {
+      "Python parent id": 63, "Python id": 65, "Ev Idx": 73
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(948): _sanity_check", "pid": 92022, "tid": 92022,
+    "ts": 5379666548018.507, "dur": 1.793,
+    "args": {
+      "Python parent id": 65, "Python id": 66, "Ev Idx": 74
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548019.317, "dur": 0.165,
+    "args": {
+      "Python parent id": 66, "Python id": 67, "Ev Idx": 75
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(1002): _find_and_load", "pid": 92022, "tid": 92022,
+    "ts": 5379666548022.448, "dur": 69.955,
+    "args": {
+      "Python parent id": 65, "Python id": 68, "Ev Idx": 76
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(152): __init__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548024.131, "dur": 0.732,
+    "args": {
+      "Python parent id": 68, "Python id": 69, "Ev Idx": 77
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(156): __enter__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548026.225, "dur": 38.002,
+    "args": {
+      "Python parent id": 68, "Python id": 70, "Ev Idx": 78
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(166): _get_module_lock", "pid": 92022, "tid": 92022,
+    "ts": 5379666548029.498, "dur": 23.158,
+    "args": {
+      "Python parent id": 70, "Python id": 71, "Ev Idx": 79
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function acquire_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548031.555, "dur": 3.058,
+    "args": {
+      "Python parent id": 71, "Python id": 72, "Ev Idx": 80
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(58): __init__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548039.509, "dur": 5.108,
+    "args": {
+      "Python parent id": 71, "Python id": 73, "Ev Idx": 81
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function allocate_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548041.109, "dur": 0.353,
+    "args": {
+      "Python parent id": 73, "Python id": 74, "Ev Idx": 82
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function allocate_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548043.657, "dur": 0.112,
+    "args": {
+      "Python parent id": 73, "Python id": 75, "Ev Idx": 83
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function release_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548052.260, "dur": 0.259,
+    "args": {
+      "Python parent id": 71, "Python id": 76, "Ev Idx": 84
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(87): acquire", "pid": 92022, "tid": 92022,
+    "ts": 5379666548055.346, "dur": 8.752,
+    "args": {
+      "Python parent id": 70, "Python id": 77, "Ev Idx": 85
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function get_ident>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548057.124, "dur": 0.146,
+    "args": {
+      "Python parent id": 77, "Python id": 78, "Ev Idx": 86
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method __exit__ of _thread.lock object at 0x7f1837cde2a0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548063.150, "dur": 0.280,
+    "args": {
+      "Python parent id": 77, "Python id": 79, "Ev Idx": 87
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548066.598, "dur": 0.742,
+    "args": {
+      "Python parent id": 68, "Python id": 80, "Ev Idx": 88
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(160): __exit__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548068.378, "dur": 5.856,
+    "args": {
+      "Python parent id": 68, "Python id": 81, "Ev Idx": 89
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(112): release", "pid": 92022, "tid": 92022,
+    "ts": 5379666548070.744, "dur": 3.318,
+    "args": {
+      "Python parent id": 81, "Python id": 82, "Ev Idx": 90
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function get_ident>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548071.314, "dur": 0.156,
+    "args": {
+      "Python parent id": 82, "Python id": 83, "Ev Idx": 91
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method __exit__ of _thread.lock object at 0x7f1837cde2a0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548073.778, "dur": 0.142,
+    "args": {
+      "Python parent id": 82, "Python id": 84, "Ev Idx": 92
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(185): cb", "pid": 92022, "tid": 92022,
+    "ts": 5379666548075.833, "dur": 2.305,
+    "args": {
+      "Python parent id": 68, "Python id": 85, "Ev Idx": 93
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function acquire_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548076.328, "dur": 0.127,
+    "args": {
+      "Python parent id": 85, "Python id": 86, "Ev Idx": 94
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548076.999, "dur": 0.198,
+    "args": {
+      "Python parent id": 85, "Python id": 87, "Ev Idx": 95
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function release_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548077.948, "dur": 0.134,
+    "args": {
+      "Python parent id": 85, "Python id": 88, "Ev Idx": 96
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(203): _lock_unlock_module", "pid": 92022, "tid": 92022,
+    "ts": 5379666548080.111, "dur": 10.402,
+    "args": {
+      "Python parent id": 68, "Python id": 89, "Ev Idx": 97
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(166): _get_module_lock", "pid": 92022, "tid": 92022,
+    "ts": 5379666548082.645, "dur": 3.906,
+    "args": {
+      "Python parent id": 89, "Python id": 90, "Ev Idx": 98
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function acquire_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548082.921, "dur": 0.082,
+    "args": {
+      "Python parent id": 90, "Python id": 91, "Ev Idx": 99
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(58): __init__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548084.008, "dur": 1.348,
+    "args": {
+      "Python parent id": 90, "Python id": 92, "Ev Idx": 100
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function allocate_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548084.255, "dur": 0.080,
+    "args": {
+      "Python parent id": 92, "Python id": 93, "Ev Idx": 101
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function allocate_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548084.814, "dur": 0.046,
+    "args": {
+      "Python parent id": 92, "Python id": 94, "Ev Idx": 102
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function release_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548086.449, "dur": 0.080,
+    "args": {
+      "Python parent id": 90, "Python id": 95, "Ev Idx": 103
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(87): acquire", "pid": 92022, "tid": 92022,
+    "ts": 5379666548087.077, "dur": 1.582,
+    "args": {
+      "Python parent id": 89, "Python id": 96, "Ev Idx": 104
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function get_ident>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548087.353, "dur": 0.095,
+    "args": {
+      "Python parent id": 96, "Python id": 97, "Ev Idx": 105
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method __exit__ of _thread.lock object at 0x7f1837cde2a0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548088.336, "dur": 0.109,
+    "args": {
+      "Python parent id": 96, "Python id": 98, "Ev Idx": 106
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(112): release", "pid": 92022, "tid": 92022,
+    "ts": 5379666548089.083, "dur": 1.371,
+    "args": {
+      "Python parent id": 89, "Python id": 99, "Ev Idx": 107
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function get_ident>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548089.325, "dur": 0.039,
+    "args": {
+      "Python parent id": 99, "Python id": 100, "Ev Idx": 108
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method __exit__ of _thread.lock object at 0x7f1837cde2a0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548090.221, "dur": 0.147,
+    "args": {
+      "Python parent id": 99, "Python id": 101, "Ev Idx": 109
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<frozen importlib._bootstrap>(185): cb", "pid": 92022, "tid": 92022,
+    "ts": 5379666548091.018, "dur": 1.017,
+    "args": {
+      "Python parent id": 68, "Python id": 102, "Ev Idx": 110
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function acquire_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548091.277, "dur": 0.084,
+    "args": {
+      "Python parent id": 102, "Python id": 103, "Ev Idx": 111
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548091.575, "dur": 0.078,
+    "args": {
+      "Python parent id": 102, "Python id": 104, "Ev Idx": 112
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function release_lock>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548091.911, "dur": 0.075,
+    "args": {
+      "Python parent id": 102, "Python id": 105, "Ev Idx": 113
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function len>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548095.273, "dur": 0.163,
+    "args": {
+      "Python parent id": 61, "Python id": 106, "Ev Idx": 114
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method view of Tensor object at 0x7f1837d6d770>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548098.147, "dur": 9.521,
+    "args": {
+      "Python parent id": 61, "Python id": 107, "Ev Idx": 115
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py(123): triton_scaled_mm", "pid": 92022, "tid": 92022,
+    "ts": 5379666548109.055, "dur": 755.301,
+    "args": {
+      "Python parent id": 61, "Python id": 108, "Ev Idx": 116
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method is_floating_point of Tensor object at 0x7f1837cdcc20>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548120.325, "dur": 0.918,
+    "args": {
+      "Python parent id": 108, "Python id": 109, "Ev Idx": 117
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py(8): is_weak_contiguous", "pid": 92022, "tid": 92022,
+    "ts": 5379666548133.382, "dur": 46.355,
+    "args": {
+      "Python parent id": 108, "Python id": 110, "Ev Idx": 118
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548136.026, "dur": 1.652,
+    "args": {
+      "Python parent id": 110, "Python id": 111, "Ev Idx": 119
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function max>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548178.385, "dur": 0.932,
+    "args": {
+      "Python parent id": 110, "Python id": 112, "Ev Idx": 120
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py(8): is_weak_contiguous", "pid": 92022, "tid": 92022,
+    "ts": 5379666548180.873, "dur": 2.276,
+    "args": {
+      "Python parent id": 108, "Python id": 113, "Ev Idx": 121
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548181.216, "dur": 0.343,
+    "args": {
+      "Python parent id": 113, "Python id": 114, "Ev Idx": 122
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function max>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548182.589, "dur": 0.260,
+    "args": {
+      "Python parent id": 113, "Python id": 115, "Ev Idx": 123
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method empty of type object at 0x7f2b5ff31740>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548185.111, "dur": 13.546,
+    "args": {
+      "Python parent id": 108, "Python id": 116, "Ev Idx": 124
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py(153): <lambda>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548199.974, "dur": 0.903,
+    "args": {
+      "Python parent id": 108, "Python id": 117, "Ev Idx": 125
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py(153): <lambda>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548201.447, "dur": 0.379,
+    "args": {
+      "Python parent id": 108, "Python id": 118, "Ev Idx": 126
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method is_floating_point of Tensor object at 0x7f1837cdcc20>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548202.344, "dur": 0.407,
+    "args": {
+      "Python parent id": 108, "Python id": 119, "Ev Idx": 127
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(324): __getitem__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548206.953, "dur": 0.591,
+    "args": {
+      "Python parent id": 108, "Python id": 120, "Ev Idx": 128
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548208.295, "dur": 1.374,
+    "args": {
+      "Python parent id": 108, "Python id": 121, "Ev Idx": 129
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548210.119, "dur": 0.454,
+    "args": {
+      "Python parent id": 108, "Python id": 122, "Ev Idx": 130
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548210.830, "dur": 0.331,
+    "args": {
+      "Python parent id": 108, "Python id": 123, "Ev Idx": 131
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548211.479, "dur": 0.348,
+    "args": {
+      "Python parent id": 108, "Python id": 124, "Ev Idx": 132
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548212.042, "dur": 0.286,
+    "args": {
+      "Python parent id": 108, "Python id": 125, "Ev Idx": 133
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method stride of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548212.555, "dur": 0.302,
+    "args": {
+      "Python parent id": 108, "Python id": 126, "Ev Idx": 134
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(330): <lambda>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548214.357, "dur": 171.711,
+    "args": {
+      "Python parent id": 108, "Python id": 127, "Ev Idx": 135
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(600): run", "pid": 92022, "tid": 92022,
+    "ts": 5379666548220.440, "dur": 163.586,
+    "args": {
+      "Python parent id": 127, "Python id": 128, "Ev Idx": 136
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/driver.py(22): __getattr__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548223.238, "dur": 4.510,
+    "args": {
+      "Python parent id": 128, "Python id": 129, "Ev Idx": 137
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/driver.py(18): _initialize_obj", "pid": 92022, "tid": 92022,
+    "ts": 5379666548224.414, "dur": 0.455,
+    "args": {
+      "Python parent id": 129, "Python id": 130, "Ev Idx": 138
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function getattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548226.461, "dur": 1.234,
+    "args": {
+      "Python parent id": 129, "Python id": 131, "Ev Idx": 139
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(953): current_device", "pid": 92022, "tid": 92022,
+    "ts": 5379666548228.739, "dur": 8.268,
+    "args": {
+      "Python parent id": 128, "Python id": 132, "Ev Idx": 140
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(289): _lazy_init", "pid": 92022, "tid": 92022,
+    "ts": 5379666548230.250, "dur": 3.836,
+    "args": {
+      "Python parent id": 132, "Python id": 133, "Ev Idx": 141
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(242): is_initialized", "pid": 92022, "tid": 92022,
+    "ts": 5379666548231.468, "dur": 2.482,
+    "args": {
+      "Python parent id": 133, "Python id": 134, "Ev Idx": 142
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_isInBadFork>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548233.487, "dur": 0.334,
+    "args": {
+      "Python parent id": 134, "Python id": 135, "Ev Idx": 143
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_getDevice>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548236.165, "dur": 0.786,
+    "args": {
+      "Python parent id": 132, "Python id": 136, "Ev Idx": 144
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/driver.py(22): __getattr__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548241.214, "dur": 1.269,
+    "args": {
+      "Python parent id": 128, "Python id": 137, "Ev Idx": 145
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/driver.py(18): _initialize_obj", "pid": 92022, "tid": 92022,
+    "ts": 5379666548241.670, "dur": 0.212,
+    "args": {
+      "Python parent id": 137, "Python id": 138, "Ev Idx": 146
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function getattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548242.201, "dur": 0.118,
+    "args": {
+      "Python parent id": 137, "Python id": 139, "Ev Idx": 147
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_getCurrentRawStream>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548243.856, "dur": 1.019,
+    "args": {
+      "Python parent id": 128, "Python id": 140, "Ev Idx": 148
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<string>(1): dynamic_func", "pid": 92022, "tid": 92022,
+    "ts": 5379666548251.247, "dur": 46.928,
+    "args": {
+      "Python parent id": 128, "Python id": 141, "Ev Idx": 149
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548254.519, "dur": 9.957,
+    "args": {
+      "Python parent id": 141, "Python id": 142, "Ev Idx": 150
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548255.483, "dur": 0.426,
+    "args": {
+      "Python parent id": 142, "Python id": 143, "Ev Idx": 151
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548256.300, "dur": 0.064,
+    "args": {
+      "Python parent id": 142, "Python id": 144, "Ev Idx": 152
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548258.349, "dur": 0.077,
+    "args": {
+      "Python parent id": 142, "Python id": 145, "Ev Idx": 153
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548259.897, "dur": 0.257,
+    "args": {
+      "Python parent id": 142, "Python id": 146, "Ev Idx": 154
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548262.610, "dur": 1.509,
+    "args": {
+      "Python parent id": 142, "Python id": 147, "Ev Idx": 155
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548265.028, "dur": 2.029,
+    "args": {
+      "Python parent id": 141, "Python id": 148, "Ev Idx": 156
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548265.364, "dur": 0.088,
+    "args": {
+      "Python parent id": 148, "Python id": 149, "Ev Idx": 157
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548265.704, "dur": 0.053,
+    "args": {
+      "Python parent id": 148, "Python id": 150, "Ev Idx": 158
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548265.954, "dur": 0.051,
+    "args": {
+      "Python parent id": 148, "Python id": 151, "Ev Idx": 159
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548266.206, "dur": 0.075,
+    "args": {
+      "Python parent id": 148, "Python id": 152, "Ev Idx": 160
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548266.805, "dur": 0.153,
+    "args": {
+      "Python parent id": 148, "Python id": 153, "Ev Idx": 161
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548267.301, "dur": 1.328,
+    "args": {
+      "Python parent id": 141, "Python id": 154, "Ev Idx": 162
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548267.539, "dur": 0.053,
+    "args": {
+      "Python parent id": 154, "Python id": 155, "Ev Idx": 163
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548267.757, "dur": 0.050,
+    "args": {
+      "Python parent id": 154, "Python id": 156, "Ev Idx": 164
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548267.928, "dur": 0.047,
+    "args": {
+      "Python parent id": 154, "Python id": 157, "Ev Idx": 165
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548268.105, "dur": 0.037,
+    "args": {
+      "Python parent id": 154, "Python id": 158, "Ev Idx": 166
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548268.455, "dur": 0.097,
+    "args": {
+      "Python parent id": 154, "Python id": 159, "Ev Idx": 167
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548268.820, "dur": 1.016,
+    "args": {
+      "Python parent id": 141, "Python id": 160, "Ev Idx": 168
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548268.964, "dur": 0.049,
+    "args": {
+      "Python parent id": 160, "Python id": 161, "Ev Idx": 169
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548269.114, "dur": 0.048,
+    "args": {
+      "Python parent id": 160, "Python id": 162, "Ev Idx": 170
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548269.268, "dur": 0.048,
+    "args": {
+      "Python parent id": 160, "Python id": 163, "Ev Idx": 171
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548269.408, "dur": 0.038,
+    "args": {
+      "Python parent id": 160, "Python id": 164, "Ev Idx": 172
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548269.717, "dur": 0.066,
+    "args": {
+      "Python parent id": 160, "Python id": 165, "Ev Idx": 173
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548270.045, "dur": 1.112,
+    "args": {
+      "Python parent id": 141, "Python id": 166, "Ev Idx": 174
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548270.176, "dur": 0.051,
+    "args": {
+      "Python parent id": 166, "Python id": 167, "Ev Idx": 175
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548270.325, "dur": 0.047,
+    "args": {
+      "Python parent id": 166, "Python id": 168, "Ev Idx": 176
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548270.475, "dur": 0.045,
+    "args": {
+      "Python parent id": 166, "Python id": 169, "Ev Idx": 177
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548270.615, "dur": 0.036,
+    "args": {
+      "Python parent id": 166, "Python id": 170, "Ev Idx": 178
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548270.933, "dur": 0.107,
+    "args": {
+      "Python parent id": 166, "Python id": 171, "Ev Idx": 179
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548271.361, "dur": 0.222,
+    "args": {
+      "Python parent id": 141, "Python id": 172, "Ev Idx": 180
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548271.849, "dur": 2.012,
+    "args": {
+      "Python parent id": 141, "Python id": 173, "Ev Idx": 181
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548272.011, "dur": 0.093,
+    "args": {
+      "Python parent id": 173, "Python id": 174, "Ev Idx": 182
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548272.280, "dur": 0.045,
+    "args": {
+      "Python parent id": 173, "Python id": 175, "Ev Idx": 183
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548274.063, "dur": 0.555,
+    "args": {
+      "Python parent id": 141, "Python id": 176, "Ev Idx": 184
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548274.265, "dur": 0.074,
+    "args": {
+      "Python parent id": 176, "Python id": 177, "Ev Idx": 185
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548274.468, "dur": 0.026,
+    "args": {
+      "Python parent id": 176, "Python id": 178, "Ev Idx": 186
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548274.796, "dur": 0.402,
+    "args": {
+      "Python parent id": 141, "Python id": 179, "Ev Idx": 187
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548274.928, "dur": 0.048,
+    "args": {
+      "Python parent id": 179, "Python id": 180, "Ev Idx": 188
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548275.079, "dur": 0.024,
+    "args": {
+      "Python parent id": 179, "Python id": 181, "Ev Idx": 189
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548275.363, "dur": 0.368,
+    "args": {
+      "Python parent id": 141, "Python id": 182, "Ev Idx": 190
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548275.497, "dur": 0.046,
+    "args": {
+      "Python parent id": 182, "Python id": 183, "Ev Idx": 191
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548275.645, "dur": 0.026,
+    "args": {
+      "Python parent id": 182, "Python id": 184, "Ev Idx": 192
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548275.901, "dur": 0.362,
+    "args": {
+      "Python parent id": 141, "Python id": 185, "Ev Idx": 193
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548276.032, "dur": 0.047,
+    "args": {
+      "Python parent id": 185, "Python id": 186, "Ev Idx": 194
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548276.180, "dur": 0.026,
+    "args": {
+      "Python parent id": 185, "Python id": 187, "Ev Idx": 195
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548276.432, "dur": 0.378,
+    "args": {
+      "Python parent id": 141, "Python id": 188, "Ev Idx": 196
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548276.559, "dur": 0.046,
+    "args": {
+      "Python parent id": 188, "Python id": 189, "Ev Idx": 197
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548276.704, "dur": 0.026,
+    "args": {
+      "Python parent id": 188, "Python id": 190, "Ev Idx": 198
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548276.973, "dur": 0.362,
+    "args": {
+      "Python parent id": 141, "Python id": 191, "Ev Idx": 199
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548277.105, "dur": 0.049,
+    "args": {
+      "Python parent id": 191, "Python id": 192, "Ev Idx": 200
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548277.252, "dur": 0.025,
+    "args": {
+      "Python parent id": 191, "Python id": 193, "Ev Idx": 201
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548277.496, "dur": 0.365,
+    "args": {
+      "Python parent id": 141, "Python id": 194, "Ev Idx": 202
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548277.631, "dur": 0.045,
+    "args": {
+      "Python parent id": 194, "Python id": 195, "Ev Idx": 203
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548277.776, "dur": 0.024,
+    "args": {
+      "Python parent id": 194, "Python id": 196, "Ev Idx": 204
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(294): mangle_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548278.023, "dur": 0.384,
+    "args": {
+      "Python parent id": 141, "Python id": 197, "Ev Idx": 205
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548278.152, "dur": 0.045,
+    "args": {
+      "Python parent id": 197, "Python id": 198, "Ev Idx": 206
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548278.297, "dur": 0.023,
+    "args": {
+      "Python parent id": 197, "Python id": 199, "Ev Idx": 207
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548280.331, "dur": 6.524,
+    "args": {
+      "Python parent id": 141, "Python id": 200, "Ev Idx": 208
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548282.198, "dur": 0.797,
+    "args": {
+      "Python parent id": 200, "Python id": 201, "Ev Idx": 209
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method data_ptr of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548285.243, "dur": 0.666,
+    "args": {
+      "Python parent id": 200, "Python id": 202, "Ev Idx": 210
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548287.369, "dur": 1.065,
+    "args": {
+      "Python parent id": 141, "Python id": 203, "Ev Idx": 211
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548287.704, "dur": 0.223,
+    "args": {
+      "Python parent id": 203, "Python id": 204, "Ev Idx": 212
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method data_ptr of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548288.110, "dur": 0.156,
+    "args": {
+      "Python parent id": 203, "Python id": 205, "Ev Idx": 213
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548288.634, "dur": 0.581,
+    "args": {
+      "Python parent id": 141, "Python id": 206, "Ev Idx": 214
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548288.785, "dur": 0.067,
+    "args": {
+      "Python parent id": 206, "Python id": 207, "Ev Idx": 215
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method data_ptr of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548288.953, "dur": 0.147,
+    "args": {
+      "Python parent id": 206, "Python id": 208, "Ev Idx": 216
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548289.404, "dur": 0.628,
+    "args": {
+      "Python parent id": 141, "Python id": 209, "Ev Idx": 217
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548289.519, "dur": 0.120,
+    "args": {
+      "Python parent id": 209, "Python id": 210, "Ev Idx": 218
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method data_ptr of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548289.735, "dur": 0.150,
+    "args": {
+      "Python parent id": 209, "Python id": 211, "Ev Idx": 219
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548290.221, "dur": 0.533,
+    "args": {
+      "Python parent id": 141, "Python id": 212, "Ev Idx": 220
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548290.340, "dur": 0.061,
+    "args": {
+      "Python parent id": 212, "Python id": 213, "Ev Idx": 221
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method data_ptr of Tensor object at 0x7f1837cdca90>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548290.493, "dur": 0.147,
+    "args": {
+      "Python parent id": 212, "Python id": 214, "Ev Idx": 222
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548290.937, "dur": 0.844,
+    "args": {
+      "Python parent id": 141, "Python id": 215, "Ev Idx": 223
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548291.050, "dur": 0.103,
+    "args": {
+      "Python parent id": 215, "Python id": 216, "Ev Idx": 224
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548291.591, "dur": 0.126,
+    "args": {
+      "Python parent id": 215, "Python id": 217, "Ev Idx": 225
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548292.042, "dur": 0.635,
+    "args": {
+      "Python parent id": 141, "Python id": 218, "Ev Idx": 226
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548292.156, "dur": 0.040,
+    "args": {
+      "Python parent id": 218, "Python id": 219, "Ev Idx": 227
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548292.464, "dur": 0.045,
+    "args": {
+      "Python parent id": 218, "Python id": 220, "Ev Idx": 228
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548292.923, "dur": 0.452,
+    "args": {
+      "Python parent id": 141, "Python id": 221, "Ev Idx": 229
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548293.074, "dur": 0.037,
+    "args": {
+      "Python parent id": 221, "Python id": 222, "Ev Idx": 230
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548293.215, "dur": 0.026,
+    "args": {
+      "Python parent id": 221, "Python id": 223, "Ev Idx": 231
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548293.596, "dur": 0.369,
+    "args": {
+      "Python parent id": 141, "Python id": 224, "Ev Idx": 232
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548293.732, "dur": 0.036,
+    "args": {
+      "Python parent id": 224, "Python id": 225, "Ev Idx": 233
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548293.878, "dur": 0.025,
+    "args": {
+      "Python parent id": 224, "Python id": 226, "Ev Idx": 234
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548294.210, "dur": 0.340,
+    "args": {
+      "Python parent id": 141, "Python id": 227, "Ev Idx": 235
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548294.326, "dur": 0.037,
+    "args": {
+      "Python parent id": 227, "Python id": 228, "Ev Idx": 236
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548294.467, "dur": 0.024,
+    "args": {
+      "Python parent id": 227, "Python id": 229, "Ev Idx": 237
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548294.733, "dur": 0.467,
+    "args": {
+      "Python parent id": 141, "Python id": 230, "Ev Idx": 238
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548294.839, "dur": 0.036,
+    "args": {
+      "Python parent id": 230, "Python id": 231, "Ev Idx": 239
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548294.977, "dur": 0.026,
+    "args": {
+      "Python parent id": 230, "Python id": 232, "Ev Idx": 240
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548295.423, "dur": 0.340,
+    "args": {
+      "Python parent id": 141, "Python id": 233, "Ev Idx": 241
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548295.528, "dur": 0.036,
+    "args": {
+      "Python parent id": 233, "Python id": 234, "Ev Idx": 242
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548295.666, "dur": 0.024,
+    "args": {
+      "Python parent id": 233, "Python id": 235, "Ev Idx": 243
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548295.939, "dur": 0.354,
+    "args": {
+      "Python parent id": 141, "Python id": 236, "Ev Idx": 244
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548296.047, "dur": 0.035,
+    "args": {
+      "Python parent id": 236, "Python id": 237, "Ev Idx": 245
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548296.183, "dur": 0.024,
+    "args": {
+      "Python parent id": 236, "Python id": 238, "Ev Idx": 246
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548296.471, "dur": 0.348,
+    "args": {
+      "Python parent id": 141, "Python id": 239, "Ev Idx": 247
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548296.571, "dur": 0.036,
+    "args": {
+      "Python parent id": 239, "Python id": 240, "Ev Idx": 248
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548296.706, "dur": 0.024,
+    "args": {
+      "Python parent id": 239, "Python id": 241, "Ev Idx": 249
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/runtime/jit.py(278): compute_spec_key", "pid": 92022, "tid": 92022,
+    "ts": 5379666548296.997, "dur": 0.367,
+    "args": {
+      "Python parent id": 141, "Python id": 242, "Ev Idx": 250
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548297.100, "dur": 0.034,
+    "args": {
+      "Python parent id": 242, "Python id": 243, "Ev Idx": 251
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548297.234, "dur": 0.037,
+    "args": {
+      "Python parent id": 242, "Python id": 244, "Ev Idx": 252
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method join of str object at 0x7f2b60ce56f0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548300.914, "dur": 1.206,
+    "args": {
+      "Python parent id": 128, "Python id": 245, "Ev Idx": 253
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/language/core.py(534): __repr__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548309.695, "dur": 5.019,
+    "args": {
+      "Python parent id": 128, "Python id": 246, "Ev Idx": 254
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/language/core.py(521): codegen_name", "pid": 92022, "tid": 92022,
+    "ts": 5379666548311.821, "dur": 2.399,
+    "args": {
+      "Python parent id": 246, "Python id": 247, "Ev Idx": 255
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method startswith of str object at 0x7f28512be4b0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548312.831, "dur": 0.360,
+    "args": {
+      "Python parent id": 247, "Python id": 248, "Ev Idx": 256
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548321.035, "dur": 0.785,
+    "args": {
+      "Python parent id": 128, "Python id": 249, "Ev Idx": 257
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method items of dict object at 0x7f2037f27ac0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548324.071, "dur": 0.179,
+    "args": {
+      "Python parent id": 128, "Python id": 250, "Ev Idx": 258
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function callable>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548326.601, "dur": 0.159,
+    "args": {
+      "Python parent id": 128, "Python id": 251, "Ev Idx": 259
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py(148): <lambda>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548327.591, "dur": 3.904,
+    "args": {
+      "Python parent id": 128, "Python id": 252, "Ev Idx": 260
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/__init__.py(59): cdiv", "pid": 92022, "tid": 92022,
+    "ts": 5379666548329.656, "dur": 0.833,
+    "args": {
+      "Python parent id": 252, "Python id": 253, "Ev Idx": 261
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/__init__.py(59): cdiv", "pid": 92022, "tid": 92022,
+    "ts": 5379666548330.996, "dur": 0.150,
+    "args": {
+      "Python parent id": 252, "Python id": 254, "Ev Idx": 262
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function len>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548332.070, "dur": 0.113,
+    "args": {
+      "Python parent id": 128, "Python id": 255, "Ev Idx": 263
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(390): __getattribute__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548334.195, "dur": 1.995,
+    "args": {
+      "Python parent id": 128, "Python id": 256, "Ev Idx": 264
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(395): launch_metadata", "pid": 92022, "tid": 92022,
+    "ts": 5379666548338.556, "dur": 0.754,
+    "args": {
+      "Python parent id": 128, "Python id": 257, "Ev Idx": 265
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(390): __getattribute__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548340.315, "dur": 4.469,
+    "args": {
+      "Python parent id": 128, "Python id": 258, "Ev Idx": 266
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(390): __getattribute__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548341.319, "dur": 0.784,
+    "args": {
+      "Python parent id": 258, "Python id": 259, "Ev Idx": 267
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(376): _init_handles", "pid": 92022, "tid": 92022,
+    "ts": 5379666548342.656, "dur": 1.477,
+    "args": {
+      "Python parent id": 258, "Python id": 260, "Ev Idx": 268
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(390): __getattribute__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548343.386, "dur": 0.605,
+    "args": {
+      "Python parent id": 260, "Python id": 261, "Ev Idx": 269
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(390): __getattribute__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548345.468, "dur": 0.414,
+    "args": {
+      "Python parent id": 128, "Python id": 262, "Ev Idx": 270
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/compiler/compiler.py(390): __getattribute__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548346.228, "dur": 0.314,
+    "args": {
+      "Python parent id": 128, "Python id": 263, "Ev Idx": 271
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "triton/backends/amd/driver.py(476): __call__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548349.038, "dur": 34.381,
+    "args": {
+      "Python parent id": 128, "Python id": 264, "Ev Idx": 272
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function launch>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548354.043, "dur": 29.153,
+    "args": {
+      "Python parent id": 264, "Python id": 265, "Ev Idx": 273
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method to of Tensor object at 0x7f1837cfc9a0>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548389.317, "dur": 474.868,
+    "args": {
+      "Python parent id": 108, "Python id": 266, "Ev Idx": 274
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method view of Tensor object at 0x7f1837d6d770>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548876.276, "dur": 6.969,
+    "args": {
+      "Python parent id": 49, "Python id": 267, "Ev Idx": 275
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/grad_mode.py(84): __exit__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548886.076, "dur": 5.512,
+    "args": {
+      "Python parent id": 38, "Python id": 268, "Ev Idx": 276
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/grad_mode.py(184): __init__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548888.136, "dur": 3.026,
+    "args": {
+      "Python parent id": 268, "Python id": 269, "Ev Idx": 277
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function is_grad_enabled>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548888.525, "dur": 0.400,
+    "args": {
+      "Python parent id": 269, "Python id": 270, "Ev Idx": 278
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _set_grad_enabled>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548889.927, "dur": 1.044,
+    "args": {
+      "Python parent id": 269, "Python id": 271, "Ev Idx": 279
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(776): __exit__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548901.248, "dur": 218.913,
+    "args": {
+      "Python parent id": 12, "Python id": 272, "Ev Idx": 280
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(790): stop", "pid": 92022, "tid": 92022,
+    "ts": 5379666548902.439, "dur": 217.722,
+    "args": {
+      "Python parent id": 272, "Python id": 273, "Ev Idx": 281
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(832): _transit_action", "pid": 92022, "tid": 92022,
+    "ts": 5379666548903.822, "dur": 216.339,
+    "args": {
+      "Python parent id": 273, "Python id": 274, "Ev Idx": 282
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x7f2b60c76f00>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548904.620, "dur": 3.785,
+    "args": {
+      "Python parent id": 274, "Python id": 275, "Ev Idx": 283
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "enum.py(774): __hash__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548905.604, "dur": 2.098,
+    "args": {
+      "Python parent id": 275, "Python id": 276, "Ev Idx": 284
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hash>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548907.452, "dur": 0.163,
+    "args": {
+      "Python parent id": 276, "Python id": 277, "Ev Idx": 285
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(235): stop_trace", "pid": 92022, "tid": 92022,
+    "ts": 5379666548909.796, "dur": 210.365,
+    "args": {
+      "Python parent id": 274, "Python id": 278, "Ev Idx": 286
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/profiler.py(363): __exit__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548911.724, "dur": 208.437,
+    "args": {
+      "Python parent id": 278, "Python id": 279, "Ev Idx": 287
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548912.933, "dur": 0.181,
+    "args": {
+      "Python parent id": 279, "Python id": 280, "Ev Idx": 288
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function getattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548913.737, "dur": 0.177,
+    "args": {
+      "Python parent id": 279, "Python id": 281, "Ev Idx": 289
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548914.496, "dur": 0.455,
+    "args": {
+      "Python parent id": 279, "Python id": 282, "Ev Idx": 290
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(959): synchronize", "pid": 92022, "tid": 92022,
+    "ts": 5379666548915.954, "dur": 204.207,
+    "args": {
+      "Python parent id": 279, "Python id": 283, "Ev Idx": 291
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(289): _lazy_init", "pid": 92022, "tid": 92022,
+    "ts": 5379666548917.008, "dur": 1.177,
+    "args": {
+      "Python parent id": 283, "Python id": 284, "Ev Idx": 292
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(242): is_initialized", "pid": 92022, "tid": 92022,
+    "ts": 5379666548917.388, "dur": 0.656,
+    "args": {
+      "Python parent id": 284, "Python id": 285, "Ev Idx": 293
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_isInBadFork>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548917.730, "dur": 0.203,
+    "args": {
+      "Python parent id": 285, "Python id": 286, "Ev Idx": 294
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(439): __init__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548920.789, "dur": 60.359,
+    "args": {
+      "Python parent id": 283, "Python id": 287, "Ev Idx": 295
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/_utils.py(9): _get_device_index", "pid": 92022, "tid": 92022,
+    "ts": 5379666548926.644, "dur": 51.289,
+    "args": {
+      "Python parent id": 287, "Python id": 288, "Ev Idx": 296
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548927.364, "dur": 0.229,
+    "args": {
+      "Python parent id": 288, "Python id": 289, "Ev Idx": 297
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548927.941, "dur": 0.051,
+    "args": {
+      "Python parent id": 288, "Python id": 290, "Ev Idx": 298
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548928.770, "dur": 0.068,
+    "args": {
+      "Python parent id": 288, "Python id": 291, "Ev Idx": 299
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_jit_internal.py(103): is_scripting", "pid": 92022, "tid": 92022,
+    "ts": 5379666548933.487, "dur": 0.204,
+    "args": {
+      "Python parent id": 288, "Python id": 292, "Ev Idx": 300
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548934.587, "dur": 0.089,
+    "args": {
+      "Python parent id": 288, "Python id": 293, "Ev Idx": 301
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(791): _get_device_index", "pid": 92022, "tid": 92022,
+    "ts": 5379666548940.043, "dur": 37.714,
+    "args": {
+      "Python parent id": 288, "Python id": 294, "Ev Idx": 302
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548941.322, "dur": 0.041,
+    "args": {
+      "Python parent id": 294, "Python id": 295, "Ev Idx": 303
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548942.167, "dur": 0.053,
+    "args": {
+      "Python parent id": 294, "Python id": 296, "Ev Idx": 304
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548942.688, "dur": 0.052,
+    "args": {
+      "Python parent id": 294, "Python id": 297, "Ev Idx": 305
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_jit_internal.py(103): is_scripting", "pid": 92022, "tid": 92022,
+    "ts": 5379666548943.696, "dur": 0.051,
+    "args": {
+      "Python parent id": 294, "Python id": 298, "Ev Idx": 306
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(765): _get_current_device_index", "pid": 92022, "tid": 92022,
+    "ts": 5379666548945.473, "dur": 32.068,
+    "args": {
+      "Python parent id": 294, "Python id": 299, "Ev Idx": 307
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(751): _get_device_attr", "pid": 92022, "tid": 92022,
+    "ts": 5379666548948.960, "dur": 28.407,
+    "args": {
+      "Python parent id": 299, "Python id": 300, "Ev Idx": 308
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(736): _get_available_device_type", "pid": 92022, "tid": 92022,
+    "ts": 5379666548950.202, "dur": 18.098,
+    "args": {
+      "Python parent id": 300, "Python id": 301, "Ev Idx": 309
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(116): is_available", "pid": 92022, "tid": 92022,
+    "ts": 5379666548951.448, "dur": 16.501,
+    "args": {
+      "Python parent id": 301, "Python id": 302, "Ev Idx": 310
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(107): _is_compiled", "pid": 92022, "tid": 92022,
+    "ts": 5379666548952.186, "dur": 1.062,
+    "args": {
+      "Python parent id": 302, "Python id": 303, "Ev Idx": 311
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548952.956, "dur": 0.229,
+    "args": {
+      "Python parent id": 303, "Python id": 304, "Ev Idx": 312
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(112): _nvml_based_avail", "pid": 92022, "tid": 92022,
+    "ts": 5379666548953.924, "dur": 11.888,
+    "args": {
+      "Python parent id": 302, "Python id": 305, "Ev Idx": 313
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "os.py(771): getenv", "pid": 92022, "tid": 92022,
+    "ts": 5379666548955.153, "dur": 10.333,
+    "args": {
+      "Python parent id": 305, "Python id": 306, "Ev Idx": 314
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "_collections_abc.py(760): get", "pid": 92022, "tid": 92022,
+    "ts": 5379666548956.373, "dur": 8.872,
+    "args": {
+      "Python parent id": 306, "Python id": 307, "Ev Idx": 315
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "os.py(674): __getitem__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548957.301, "dur": 6.667,
+    "args": {
+      "Python parent id": 307, "Python id": 308, "Ev Idx": 316
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "os.py(754): encode", "pid": 92022, "tid": 92022,
+    "ts": 5379666548958.368, "dur": 3.278,
+    "args": {
+      "Python parent id": 308, "Python id": 309, "Ev Idx": 317
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548958.931, "dur": 0.045,
+    "args": {
+      "Python parent id": 309, "Python id": 310, "Ev Idx": 318
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method encode of str object at 0x7f286ab5cb70>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548961.048, "dur": 0.428,
+    "args": {
+      "Python parent id": 309, "Python id": 311, "Ev Idx": 319
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_getDeviceCount>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548967.399, "dur": 0.330,
+    "args": {
+      "Python parent id": 302, "Python id": 312, "Ev Idx": 320
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method lower of str object at 0x7f2b60b6eb70>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548971.991, "dur": 0.368,
+    "args": {
+      "Python parent id": 300, "Python id": 313, "Ev Idx": 321
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(767): <lambda>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548973.548, "dur": 3.721,
+    "args": {
+      "Python parent id": 300, "Python id": 314, "Ev Idx": 322
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(953): current_device", "pid": 92022, "tid": 92022,
+    "ts": 5379666548974.333, "dur": 2.855,
+    "args": {
+      "Python parent id": 314, "Python id": 315, "Ev Idx": 323
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(289): _lazy_init", "pid": 92022, "tid": 92022,
+    "ts": 5379666548974.819, "dur": 0.838,
+    "args": {
+      "Python parent id": 315, "Python id": 316, "Ev Idx": 324
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(242): is_initialized", "pid": 92022, "tid": 92022,
+    "ts": 5379666548975.127, "dur": 0.414,
+    "args": {
+      "Python parent id": 316, "Python id": 317, "Ev Idx": 325
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_isInBadFork>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548975.387, "dur": 0.122,
+    "args": {
+      "Python parent id": 317, "Python id": 318, "Ev Idx": 326
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_getDevice>", "pid": 92022, "tid": 92022,
+    "ts": 5379666548976.186, "dur": 0.950,
+    "args": {
+      "Python parent id": 315, "Python id": 319, "Ev Idx": 327
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(443): __enter__", "pid": 92022, "tid": 92022,
+    "ts": 5379666548982.492, "dur": 65.932,
+    "args": {
+      "Python parent id": 283, "Python id": 320, "Ev Idx": 328
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_exchangeDevice>", "pid": 92022, "tid": 92022,
+    "ts": 5379666549047.105, "dur": 1.071,
+    "args": {
+      "Python parent id": 320, "Python id": 321, "Ev Idx": 329
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_synchronize>", "pid": 92022, "tid": 92022,
+    "ts": 5379666549052.159, "dur": 52.012,
+    "args": {
+      "Python parent id": 283, "Python id": 322, "Ev Idx": 330
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(446): __exit__", "pid": 92022, "tid": 92022,
+    "ts": 5379666549104.996, "dur": 15.165,
+    "args": {
+      "Python parent id": 283, "Python id": 323, "Ev Idx": 331
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_maybeExchangeDevice>", "pid": 92022, "tid": 92022,
+    "ts": 5379666549106.946, "dur": 0.807,
+    "args": {
+      "Python parent id": 323, "Python id": 324, "Ev Idx": 332
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function perf_counter_ns>", "pid": 92022, "tid": 92022,
+    "ts": 5379666549109.837, "dur": 0.460,
+    "args": {
+      "Python parent id": 323, "Python id": 325, "Ev Idx": 333
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _disable_profiler of PyCapsule object at 0x7f286a092150>", "pid": 92022, "tid": 92022,
+    "ts": 5379666549112.167, "dur": 7.994,
+    "args": {
+      "Python parent id": 323, "Python id": 326, "Ev Idx": 334
+    }
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipLaunchKernel", "pid": 92022, "tid": 92022,
+    "ts": 5379666547959.535, "dur": 23.390,
+    "args": {
+      "External id": 517,          "kernel": "void vllm::dynamic_per_token_scaled_fp8_quant_kernel<c10::Half>(c10::Float8_e4m3fnuz*, float*, c10::Half const*, float const*, int)", "cid": 107, "correlation": 6,      "grid": [3072, 1, 1],      "block": [1024, 1, 1],      "shared memory": 0
+    }
+  },
+  {
+    "ph": "s", "id": 6, "pid": 92022, "tid": 92022, "ts": 5379666547959.535,
+    "cat": "ac2g", "name": "ac2g"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipPointerGetAttribute", "pid": 92022, "tid": 92022,
+    "ts": 5379666548360.109, "dur": 2.036,
+    "args": {
+      "External id": 7,      "cid": 295, "correlation": 7
+    }
+  },
+  {
+    "ph": "f", "id": 7, "pid": 92022, "tid": 92022, "ts": 5379666548360.109,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipPointerGetAttribute", "pid": 92022, "tid": 92022,
+    "ts": 5379666548363.981, "dur": 0.984,
+    "args": {
+      "External id": 8,      "cid": 295, "correlation": 8
+    }
+  },
+  {
+    "ph": "f", "id": 8, "pid": 92022, "tid": 92022, "ts": 5379666548363.981,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipPointerGetAttribute", "pid": 92022, "tid": 92022,
+    "ts": 5379666548366.231, "dur": 0.568,
+    "args": {
+      "External id": 9,      "cid": 295, "correlation": 9
+    }
+  },
+  {
+    "ph": "f", "id": 9, "pid": 92022, "tid": 92022, "ts": 5379666548366.231,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipPointerGetAttribute", "pid": 92022, "tid": 92022,
+    "ts": 5379666548368.024, "dur": 0.297,
+    "args": {
+      "External id": 10,      "cid": 295, "correlation": 10
+    }
+  },
+  {
+    "ph": "f", "id": 10, "pid": 92022, "tid": 92022, "ts": 5379666548368.024,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipPointerGetAttribute", "pid": 92022, "tid": 92022,
+    "ts": 5379666548369.501, "dur": 0.802,
+    "args": {
+      "External id": 11,      "cid": 295, "correlation": 11
+    }
+  },
+  {
+    "ph": "f", "id": 11, "pid": 92022, "tid": 92022, "ts": 5379666548369.501,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipModuleLaunchKernel", "pid": 92022, "tid": 92022,
+    "ts": 5379666548372.397, "dur": 10.197,
+    "args": {
+      "External id": 12,          "kernel": "scaled_mm_kernel", "cid": 169, "correlation": 12,      "grid": [9216, 1, 1],      "block": [256, 1, 1],      "shared memory": 2048
+    }
+  },
+  {
+    "ph": "s", "id": 12, "pid": 92022, "tid": 92022, "ts": 5379666548372.397,
+    "cat": "ac2g", "name": "ac2g"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "hipDeviceSynchronize", "pid": 92022, "tid": 92022,
+    "ts": 5379666549056.420, "dur": 46.629,
+    "args": {
+      "External id": 13,      "cid": 48, "correlation": 13
+    }
+  },
+  {
+    "ph": "f", "id": 13, "pid": 92022, "tid": 92022, "ts": 5379666549056.420,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "kernel", "name": "void vllm::dynamic_per_token_scaled_fp8_quant_kernel<c10::Half>(c10::Float8_e4m3fnuz*, float*, c10::Half const*, float const*, int)", "pid": 2, "tid": 0,
+    "ts": 5379666547991.521, "dur": 29.519,
+    "args": {
+      "External id": 517,      "device": 2, "stream": 0,      "correlation": 6, "kind": "Dispatch Kernel",      "grid":     [3072, 1, 1], "block":     [1024, 1, 1]
+    }
+  },
+  {
+    "ph": "f", "id": 6, "pid": 2, "tid": 0, "ts": 5379666547991.521,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "kernel", "name": "scaled_mm_kernel", "pid": 2, "tid": 0,
+    "ts": 5379666548391.202, "dur": 498.861,
+    "args": {
+      "External id": 12,      "device": 2, "stream": 0,      "correlation": 12, "kind": "Dispatch Kernel",      "grid":     [9216, 1, 1], "block":     [256, 1, 1]
+    }
+  },
+  {
+    "ph": "f", "id": 12, "pid": 2, "tid": 0, "ts": 5379666548391.202,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 92022, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 92022, "tid": 0,
+    "args": {
+      "labels": "CPU"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 92022, "tid": 0,
+    "args": {
+      "sort_index": 92022
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 0, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 0, "tid": 0,
+    "args": {
+      "labels": "GPU 0"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 0, "tid": 0,
+    "args": {
+      "sort_index": 5000000
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 1, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 1, "tid": 0,
+    "args": {
+      "labels": "GPU 1"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 1, "tid": 0,
+    "args": {
+      "sort_index": 5000001
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 2, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 2, "tid": 0,
+    "args": {
+      "labels": "GPU 2"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 2, "tid": 0,
+    "args": {
+      "sort_index": 5000002
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 3, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 3, "tid": 0,
+    "args": {
+      "labels": "GPU 3"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 3, "tid": 0,
+    "args": {
+      "sort_index": 5000003
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 4, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 4, "tid": 0,
+    "args": {
+      "labels": "GPU 4"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 4, "tid": 0,
+    "args": {
+      "sort_index": 5000004
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 5, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 5, "tid": 0,
+    "args": {
+      "labels": "GPU 5"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 5, "tid": 0,
+    "args": {
+      "sort_index": 5000005
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 6, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 6, "tid": 0,
+    "args": {
+      "labels": "GPU 6"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 6, "tid": 0,
+    "args": {
+      "sort_index": 5000006
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 7, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 7, "tid": 0,
+    "args": {
+      "labels": "GPU 7"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 7, "tid": 0,
+    "args": {
+      "sort_index": 5000007
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 8, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 8, "tid": 0,
+    "args": {
+      "labels": "GPU 8"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 8, "tid": 0,
+    "args": {
+      "sort_index": 5000008
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 9, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 9, "tid": 0,
+    "args": {
+      "labels": "GPU 9"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 9, "tid": 0,
+    "args": {
+      "sort_index": 5000009
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 10, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 10, "tid": 0,
+    "args": {
+      "labels": "GPU 10"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 10, "tid": 0,
+    "args": {
+      "sort_index": 5000010
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 11, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 11, "tid": 0,
+    "args": {
+      "labels": "GPU 11"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 11, "tid": 0,
+    "args": {
+      "sort_index": 5000011
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 12, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 12, "tid": 0,
+    "args": {
+      "labels": "GPU 12"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 12, "tid": 0,
+    "args": {
+      "sort_index": 5000012
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 13, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 13, "tid": 0,
+    "args": {
+      "labels": "GPU 13"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 13, "tid": 0,
+    "args": {
+      "sort_index": 5000013
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 14, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 14, "tid": 0,
+    "args": {
+      "labels": "GPU 14"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 14, "tid": 0,
+    "args": {
+      "sort_index": 5000014
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 5379666546488.991, "pid": 15, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 5379666546488.991, "pid": 15, "tid": 0,
+    "args": {
+      "labels": "GPU 15"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 15, "tid": 0,
+    "args": {
+      "sort_index": 5000015
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 5379666546488.991, "pid": 0, "tid": 0,
+    "args": {
+      "name": "thread 0 (python3)"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 0, "tid": 0,
+    "args": {
+      "sort_index": 0
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 5379666546488.991, "pid": 2, "tid": 0,
+    "args": {
+      "name": "stream 0 "
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 2, "tid": 0,
+    "args": {
+      "sort_index": 0
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 5379666546488.991, "pid": 92022, "tid": 92022,
+    "args": {
+      "name": "thread 92022 (python3)"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 92022, "tid": 92022,
+    "args": {
+      "sort_index": 92022
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 5379666546488.991, "pid": 92022, "tid": 92022,
+    "args": {
+      "name": "thread 92022 (python3)"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 5379666546488.991, "pid": 92022, "tid": 92022,
+    "args": {
+      "sort_index": 92022
+    }
+  },
+  {
+    "ph": "X", "cat": "Trace", "ts": 5379666546366.860, "dur": 2753.301,
+    "pid": "Spans", "tid": "PyTorch Profiler",
+    "name": "PyTorch Profiler (0)",
+    "args": {
+      "Op count": 0
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 5379666546366.860,
+    "pid": "Spans", "tid": 0,
+    "args": {
+      "sort_index": 536870912
+    }
+  },
+  {
+    "name": "Iteration Start: PyTorch Profiler", "ph": "i", "s": "g",
+    "pid": "Traces", "tid": "Trace PyTorch Profiler", "ts": 5379666546366.860
+  },
+  {
+    "name": "Record Window End", "ph": "i", "s": "g",
+    "pid": "", "tid": "", "ts": 5379666549991.336
+  }
+  ],
+  "traceName": "fp8.json",
+  "displayTimeUnit": "ms",
+  "baseTimeNanoseconds": 1727743122000000000
+}

@@ -12,9 +12,9 @@ from diffusers.models.normalization import AdaLayerNormContinuous, AdaLayerNormZ
 from vllm.model_executor.layers.quantization.utils.w8a8_utils import apply_fp8_linear, apply_int8_linear
 
 base_dir = os.path.join(os.path.dirname(__file__), '..', '..')
-activations_scales = torch.load(f'{base_dir}/data/activations_scales.pt')
-fp8_quant_errors = torch.load(f'{base_dir}/data/quant_errors_fp8.pt')
-int8_quant_errors = torch.load(f'{base_dir}/data/quant_errors_int8.pt')
+# activations_scales = torch.load(f'{base_dir}/data/activations_scales.pt')
+# fp8_quant_errors = torch.load(f'{base_dir}/data/quant_errors_fp8.pt')
+# int8_quant_errors = torch.load(f'{base_dir}/data/quant_errors_int8.pt')
 
 def _chunked_feed_forward(ff: nn.Module, hidden_states: torch.Tensor, chunk_dim: int, chunk_size: int):
     # "feed_forward_chunk_size" can be used to save memory
@@ -43,7 +43,13 @@ class QuantLinear(nn.Module):
 
         max_abs_val = torch.max(torch.abs(module.weight.T), axis=0).values.to(torch.float32)
 
-        finfo = torch.finfo(torch.float8_e4m3fn)
+        self.fp8_data_type = torch.float8_e4m3fn
+        if torch.version.hip is not None:
+            self.fp8_data_type = torch.float8_e4m3fnuz
+
+        self.in_features = module.in_features
+        self.out_features = module.out_features
+        finfo = torch.finfo(self.fp8_data_type)
         iinfo = torch.iinfo(torch.int8)
         
         assert quant_mode in ['fp8', 'int8']
@@ -61,7 +67,7 @@ class QuantLinear(nn.Module):
         if self.quant_mode == 'fp8':
             self.weight_scale = (max_abs_val /  finfo.max)
             self.weight_scale = self.weight_scale.contiguous()
-            self.weight = (module.weight.T / self.weight_scale).clamp(min=finfo.min, max=finfo.max).to(torch.float8_e4m3fn)
+            self.weight = (module.weight.T / self.weight_scale).clamp(min=finfo.min, max=finfo.max).to(self.fp8_data_type)
         elif self.quant_mode == 'int8':
             self.weight_scale = (max_abs_val / iinfo.max)
             self.weight_scale = self.weight_scale.contiguous()

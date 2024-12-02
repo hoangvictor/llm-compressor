@@ -43,7 +43,7 @@ def partial_quant():
     for quant_mode in [None]:
         os.makedirs(f'{img_save_dir}_{quant_mode}', exist_ok=True)
 
-        pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
+        pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir=os.path.join(base_dir, 'data/cache'))
         pipe.to("cuda")
         pipe.transformer.to(memory_format=torch.channels_last)
         pipe.vae.to(memory_format=torch.channels_last)

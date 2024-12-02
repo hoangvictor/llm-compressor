@@ -11,6 +11,7 @@ from vllm.model_executor.layers.quantization.utils.w8a8_utils import apply_fp8_l
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 quant_mode = 'int8'
+base_dir = os.path.join(os.path.dirname(__file__), '..', '..')
 
 def calculate_adjusted_scale_factor(qvals: torch.Tensor):
     scales = []
@@ -114,7 +115,11 @@ class FP8Linear(nn.Module):
         # most_freq_max_abs_exp_int = max_abs_exp_int_list[torch.argmax(max_abs_exp_int_count)]
         # additional_scale = 2**(most_freq_max_abs_exp_int)
 
-        finfo = torch.finfo(torch.float8_e4m3fn)
+        self.fp8_data_type = torch.float8_e4m3fn
+        if torch.version.hip is not None:
+            self.fp8_data_type = torch.float8_e4m3fnuz
+
+        finfo = torch.finfo(self.fp8_data_type)
         
         assert quant_mode in ['fp8', 'int8']
         self.quant_mode = quant_mode
@@ -134,7 +139,7 @@ class FP8Linear(nn.Module):
 
         # self.local_scales = torch.Tensor(self.local_scales)
         # self.fp8_weight = adjust_local_scales(self.local_scales, self.fp8_weight, 128)
-        self.fp8_weight = self.fp8_weight.to(torch.float8_e4m3fn)
+        self.fp8_weight = self.fp8_weight.to(self.fp8_data_type)
 
         # import matplotlib.pyplot as plt
         # a = module.weight.T[0]
@@ -176,7 +181,7 @@ class FP8Linear(nn.Module):
 
 
 def example():
-    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
+    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir=os.path.join(base_dir, 'data/cache'))
     pipe.to("cuda")
 
     # if torch.cuda.is_available():
@@ -234,14 +239,14 @@ def example():
 
 def quant():
     batch_size = 32
-    coco_val_dataset_path = '/data0/tien/llm-compressor/data/coco_all_data_info.json'
-    img_save_dir = '/data0/tien/llm-compressor/data/generated_img'
+    coco_val_dataset_path = os.path.join(base_dir, 'data/coco_all_data_info.json')
+    img_save_dir = os.path.join(base_dir, 'data/generated_img')
     os.makedirs(img_save_dir, exist_ok=True)
 
     all_coco_promts_data = json.load(open(coco_val_dataset_path))
     all_coco_images = list(all_coco_promts_data.keys())
 
-    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
+    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir=os.path.join(base_dir, 'data/cache'))
     pipe.to("cuda")
 
     if torch.cuda.is_available():

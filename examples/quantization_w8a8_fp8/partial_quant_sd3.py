@@ -31,8 +31,8 @@ def seed_everything(seed: int):
 seed_everything(42)
 
 def partial_quant():
-    batch_size = 1
-    num_batch = 2048
+    batch_size = 16
+    num_batch = 2048 // batch_size
     coco_val_dataset_path = f'{base_dir}/data/coco_2048_samples_info.json'
     img_save_dir = f'{base_dir}/data/generated_img'
 
@@ -40,10 +40,10 @@ def partial_quant():
     all_coco_images = list(all_coco_promts_data.keys())
 
     all_results = []
-    for quant_mode in ['fp8', None, 'int8']:
+    for quant_mode in ['fp8']:
         os.makedirs(f'{img_save_dir}_{quant_mode}', exist_ok=True)
 
-        pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
+        pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir=os.path.join(base_dir, 'data/cache'))
         pipe.to("cuda")
         pipe.transformer.to(memory_format=torch.channels_last)
         pipe.vae.to(memory_format=torch.channels_last)
@@ -55,7 +55,7 @@ def partial_quant():
         print(f'device: {device}')
         torch.set_grad_enabled(False)
         
-        if quant_mode is not None:
+        if quant_mode != 'fp16':
             print("Quantizing")
             for name, module in all_modules.items():
                 if isinstance(module, torch.nn.Linear) and 'transformer_blocks' in name and 'ff' in name:

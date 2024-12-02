@@ -53,7 +53,7 @@ def get_device_arch():
 
 def load_model(torch_dtype: torch.dtype, torch_compile: bool, profile: bool):
     pipe = StableDiffusion3Pipeline.from_pretrained(
-        "stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch_dtype, cache_dir="/data0/tien/cache"
+        "stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch_dtype, cache_dir=os.path.join(base_dir, 'data/cache'))
     ).to("cuda")
     pipe.set_progress_bar_config(disable=True)
 

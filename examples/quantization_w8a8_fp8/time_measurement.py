@@ -1,6 +1,6 @@
 import time
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '6'
+os.environ['CUDA_VISIBLE_DEVICES'] = '4'
 
 import pandas as pd
 
@@ -14,8 +14,8 @@ base_dir = os.path.join(os.path.dirname(__file__), '..', '..')
 def run():
     all_results = []
     
-    for quant_mode in ['int8', 'fp8', None]:
-        pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
+    for quant_mode in ['int8', 'fp8', 'fp16']:
+        pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir=os.path.join(base_dir, 'data/cache'))
         pipe.to("cuda")
 
         pipe.transformer.to(memory_format=torch.channels_last)
@@ -25,7 +25,7 @@ def run():
         model = pipe.transformer
         all_modules = dict(model.named_modules())
 
-        if quant_mode is not None:
+        if quant_mode != 'fp16':
             print("Quantizing")
             for name, module in all_modules.items():
                 if isinstance(module, torch.nn.Linear) and 'transformer_blocks' in name and 'ff' in name:

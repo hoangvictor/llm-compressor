@@ -15,6 +15,7 @@ from torchvision.transforms import functional as F
 from tqdm.auto import tqdm
 from torch.utils.data import Dataset
 
+base_dir = os.path.join(os.path.dirname(__file__), '..', '..')
 
 class Model_Handle():
 
@@ -128,10 +129,10 @@ def parse_args():
     )
     parser.add_argument("--images_path",
                         type=str,
-                        default="/data0/tien/llm-compressor/data/val2014/",
+                        default=os.path.join(base_dir, "data/val2014/"),
                         help="Path to the image directory")
     parser.add_argument("--captions_path",
-                        default="/data0/tien/llm-compressor/data/captions_val2014.json",
+                        default=os.path.join(base_dir, "data/captions_val2014.json"),
                         type=str,
                         help="Path to the COCO caption json file")
     parser.add_argument('--gen_bs',
@@ -140,15 +141,15 @@ def parse_args():
                         help="Batch size for image generation")
     parser.add_argument("--gen_img_dir",
                         type=str,
-                        default='/data0/tien/llm-compressor/data/full_coco_w6a6_rate_0.0_samples_64/',
+                        default=os.path.join(base_dir, 'data/full_coco_w6a6_rate_0.0_samples_64/'),
                         help="Path to generated images directory")
     parser.add_argument("--width",
                         type=int,
-                        default=512,
+                        default=1024,
                         help="generated image width")
     parser.add_argument("--height",
                         type=int,
-                        default=512,
+                        default=1024,
                         help="generated image height")
     parser.add_argument("--infer_steps",
                         type=int,
@@ -213,12 +214,12 @@ def count_missmatch(gen_img_paths, caption_img_pair_dict, verbose=False):
     else:
         return False
 
-def preprocess_image(image, img_width=512, img_height=512):
+def preprocess_image(image, img_width=1024, img_height=1024):
     """
     Preprocess images for computing FID score.
     Args:
         image (PIL.Image)
-        img_size (int, optional): Image size. Defaults to 512.
+        img_size (int, optional): Image size. Defaults to 1024.
 
     Returns:
         (PIL.Image): preprocessed image
@@ -228,7 +229,7 @@ def preprocess_image(image, img_width=512, img_height=512):
     return F.center_crop(image, (img_width, img_height))
 
 
-def load_images(image_path, img_dir=None, img_width=512, img_height=512):
+def load_images(image_path, img_dir=None, img_width=1024, img_height=1024):
     """
     Load images and preprocess in batche.
     Args:
@@ -262,8 +263,8 @@ def gen_img(pipeline,
             file_names,
             batch_size,
             output_dir,
-            width=512,
-            height=512,
+            width=1024,
+            height=1024,
             guidance_scale=7.5,
             infer_steps=50,
             img_format='.jpg'):
@@ -275,8 +276,8 @@ def gen_img(pipeline,
         file_names (str): list of image paths use to get the image format and save.
         batch_size (int): batch size
         output_dir (str): path to the directory to save the generated images
-        width (int, optional): width. Defaults to 512.
-        height (int, optional): height. Defaults to 512.
+        width (int, optional): width. Defaults to 1024.
+        height (int, optional): height. Defaults to 1024.
         guidance_scale (float, optional): guidance_scale. Defaults to 7.5.
         infer_steps (int, optional): infer_steps. Defaults to 50.
         img_format (str, optional): img format for generated image. Defaults to .jpg.
@@ -329,8 +330,8 @@ def comp_fid(fid,
              device,
              img_dir=None,
              batch_size=64,
-             width=512,
-             height=512):
+             width=1024,
+             height=1024):
     """
     Compute FID score by loading real images dataset and generated images
     Args:
@@ -436,12 +437,12 @@ def main():
     batch_size = args.batch_size
     results = []
     all_dirs = []
-    all_dirs = ['/data0/tien/llm-compressor/data/generated_img_fp8', '/data0/tien/llm-compressor/data/generated_img_int8', '/data0/tien/llm-compressor/data/generated_img_None']
+    all_dirs = [os.path.join(base_dir, 'data/generated_img_fp8'), os.path.join(base_dir, 'data/generated_img_int8'), os.path.join(base_dir, 'data/generated_img_fp16')]
     if end == -1:
         end = len(all_dirs)
     for gen_img_dir in all_dirs[start:end]:
         gen_img_dir_name = gen_img_dir.split('/')[-1]
-        if os.path.exists(f'/data0/tien/llm-compressor/data/results_{gen_img_dir_name}.csv'):
+        if os.path.exists(os.path.join(base_dir, f'data/results_{gen_img_dir_name}.csv')):
             continue
         
         print(gen_img_dir_name)
@@ -468,16 +469,11 @@ def main():
                 height=height,
             )
             print(f"FID: {fid_score:.3f}")
-
-        if args.compute_clip:
-            clip_score = comp_clip(caption_img_pair_dict, gen_img_path, device,
-                                batch_size)
-            print(f"CLIP: {clip_score:.3f}")
         
-        results.append([gen_img_dir, fid_score, clip_score])
-        pd.DataFrame([[gen_img_dir, fid_score, clip_score]], columns=['gen_img_dir', 'fid', 'clip']).to_csv(f'/data0/tien/llm-compressor/data/results_{gen_img_dir_name}.csv', index=False)
+        results.append([gen_img_dir, fid_score])
+        pd.DataFrame([[gen_img_dir, fid_score]], columns=['gen_img_dir', 'fid']).to_csv(os.path.join(base_dir, f'data/results_{gen_img_dir_name}.csv'), index=False)
 
-    pd.DataFrame(results, columns=['gen_img_dir', 'fid', 'clip']).to_csv(f'/data0/tien/llm-compressor/data/all_results.csv', index=False)
+    pd.DataFrame(results, columns=['gen_img_dir', 'fid']).to_csv(os.path.join(base_dir, f'data/all_results.csv'), index=False)
 
 if __name__ == '__main__':
     main()

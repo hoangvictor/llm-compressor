@@ -13,6 +13,7 @@ from custom_blocks import QuantLinear
 from datasets import load_dataset
 
 
+base_dir = os.path.join(os.path.dirname(__file__), '..', '..')
 class Evaluator:
     def __init__(self, dataset, tokenizer, device, n_samples=None):
         self.dataset = dataset
@@ -67,7 +68,7 @@ for model_path in [
         dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='test')
         evaluator = Evaluator(dataset, tokenizer, 'cuda', n_samples=None)
         model = AutoModelForCausalLM.from_pretrained(
-            model_path, torch_dtype=torch.bfloat16
+            model_path, torch_dtype=torch.bfloat16, cache_dir=os.path.join(base_dir, 'data/cache')
         ).to('cuda')
         all_modules = dict(model.named_modules())
         if mode is not None:
@@ -91,7 +92,7 @@ for model_path in [
         all_results.append([model_path, mode, ppl, rnt])
 
         if mode == None:
-            mode = 'original'
+            mode = 'fp16'
 
         full_results[model_path][mode] = {
             'run_time': run_time,
@@ -101,7 +102,7 @@ for model_path in [
         del tokenizer, dataset, evaluator, model, all_modules
         torch.cuda.empty_cache()
 
-        json.dump(full_results, open('/data0/tien/llm-compressor/data/full_results_llm.json', 'w'))
+        json.dump(full_results, open(os.path.join(base_dir, 'data/full_results_llm.json'), 'w'))
 
 df = pd.DataFrame(all_results, columns = ['model', 'mode', 'ppl', 'batch_inference_time'])
-df.to_csv('/data0/tien/llm-compressor/data/full_results_df.csv', index=False)
+df.to_csv(os.path.join(base_dir, 'data/full_results_df.csv'), index=False)

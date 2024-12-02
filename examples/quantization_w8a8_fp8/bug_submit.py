@@ -13,7 +13,7 @@ def run():
     img_save_dir = f'{base_dir}/data/test_generated_img'
     os.makedirs(f'{img_save_dir}', exist_ok=True)
 
-    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
+    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir=os.path.join(base_dir, 'data/cache'))
     pipe.to("cuda")
 
     torch.set_grad_enabled(False)

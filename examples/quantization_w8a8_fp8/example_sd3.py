@@ -69,7 +69,11 @@ class FP8Linear(nn.Module):
 
         max_abs_val = torch.max(torch.abs(module.weight.T), axis=0).values.to(torch.float32)
 
-        finfo = torch.finfo(torch.float8_e4m3fn)
+        self.fp8_data_type = torch.float8_e4m3fn
+        if torch.version.hip is not None:
+            self.fp8_data_type = torch.float8_e4m3fnuz
+
+        finfo = torch.finfo(self.fp8_data_type)
         iinfo = torch.iinfo(torch.int8)
         
         assert quant_mode in ['fp8', 'int8', None]
@@ -88,7 +92,7 @@ class FP8Linear(nn.Module):
         self.fp8_weight_scale = self.fp8_weight_scale.contiguous()
         self.fp8_weight = (module.weight.T / self.fp8_weight_scale).clamp(min=finfo.min, max= finfo.max)
 
-        self.fp8_weight = self.fp8_weight.to(torch.float8_e4m3fn)
+        self.fp8_weight = self.fp8_weight.to(self.fp8_data_type)
         
         self.int8_weight_scale = (max_abs_val / iinfo.max).clamp(min=1e-12)
         self.int8_weight_scale = self.int8_weight_scale.contiguous()
@@ -141,7 +145,7 @@ def quant():
     all_coco_promts_data = json.load(open(coco_val_dataset_path))
     all_coco_images = list(all_coco_promts_data.keys())
 
-    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir="/data0/tien/cache")
+    pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16, cache_dir=os.path.join(base_dir, 'data/cache'))
     pipe.to("cuda")
     model = pipe.transformer
     all_modules = dict(model.named_modules())
